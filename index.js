@@ -28,7 +28,7 @@ const client = new MongoClient(uri, {
 });
 
 async function run() {
-  app.locals.tasksCollection = client.db("your-database-name").collection("tasks");
+  app.locals.tasksCollection = client.db("task-management").collection("tasks");
 
   try {
     await client.db("admin").command({ ping: 1 });
